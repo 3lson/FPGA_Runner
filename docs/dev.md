@@ -22,3 +22,11 @@ Note Unity might take some time to open here
 4) Make the Character Move Left/Right
 
 From the starter_code in assets we can create this.
+
+## Phase 2: Integration test for FPGA Control via TCP connection to control the player
+
+
+
+## Phase 3: Full Endless Runner Game Developement (1st Draft)
+
+## Phase 4: Replace Keyboard Controls on Endless Runner to FPGA controls
