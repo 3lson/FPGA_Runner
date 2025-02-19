@@ -1,7 +1,44 @@
-# FPGA_Runner
+# FPGA_Runner:Endless Runner Game with FPGA Controller
 
+A Unity-based Endless Runner game controlled using an FPGA-based accelerometer! Players can tilt their FPGA board to move left/right, jump, and slide, creating a unique motion-controlled gaming experience.
 
-To run the game:
+## Project Overview
+This project integrates hardware (FPGA) with software (Unity) to create an interactive and immersive endless runner. Instead of traditional keyboard or touch controls, the player moves by tilting an FPGA-controlled accelerometer, sending real-time data to Unity via TCP communication.
+
+Key Features:
+✔️ Tilt to Move – Shift FPGA left/right to change lanes.
+✔️ Tilt Up to Jump – Avoid obstacles by tilting up.
+✔️ Tilt Down to Slide – Duck under barriers by tilting down.
+✔️ Dynamic Speed Increase – The game gets progressively faster!
+✔️ Real-Time TCP Communication – FPGA sends movement data via a network connection.
+
+## Implementation & Approach
+
+### FPGA Controller (Accelerometer-Based Input)
+- The FPGA board reads accelerometer values (X, Y axes).
+- Tilt movements are processed and transmitted over TCP.
+- Data format: "X_Value, Y_Value" (e.g., "150, -80").
+
+### Unity Game Development
+- A TCP Listener in Unity continuously receives FPGA data.
+- Movement logic:
+  - X-Axis: Moves the player left/right between lanes.
+  - Y-Axis: Triggers jumping or sliding.
+- Physics-based CharacterController ensures smooth motion.
+- Collision detection manages game-over states when hitting obstacles.
+
+### Networking (TCP Communication)
+- Unity runs a TCP Server on port 5005 to receive FPGA input.
+- The FPGA board sends real-time data, ensuring low-latency motion control.
+
+## How to run the game
+
+### Prerequisites:
+✔️ Unity 2021+ installed
+✔️ FPGA Board with Accelerometer
+✔️ Python/TCP Debugging Tool (Optional)
+
+### Steps to run the game:
 1) Open Quartus Prime Lite Edition 18.1. Blast the FPGA with the .sof file
 
 2) Open the Windows Powershell and key in
