@@ -72,8 +72,7 @@ py sendtomac.py
 
 <div align = "center" >
 
-|![alt text](https://github.com/user-attachments/assets/85d03e5f-3dc3-4fda-8345-2ea04e77485c)|
-|:--:|
+https://github.com/user-attachments/assets/85d03e5f-3dc3-4fda-8345-2ea04e77485c
 |*img: Gantt Chart Progress after Week 1*|
 
 </div>
