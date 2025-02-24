@@ -70,6 +70,14 @@ py sendtomac.py
 
 8) Tap to start and Enjoy the Game!
 
+<div align = "center" >
+
+|![alt text](https://github.com/user-attachments/assets/85d03e5f-3dc3-4fda-8345-2ea04e77485c)|
+|:--:|
+|*img: Gantt Chart Progress after Week 1*|
+
+</div>
+
 https://github.com/user-attachments/assets/85d03e5f-3dc3-4fda-8345-2ea04e77485c
 
 ## Skills Gained from This Project
