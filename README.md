@@ -10,7 +10,7 @@
     -[Steps to run the Game](#steps-to-run-the-game)
 - [Skills Gained from this Project](#skills-gained-from-this-project)
     - [FGPA & Embedded Systems](#FPGA-and-embedded-systems)
-    - [Game Development (Unity & C#](#game-development)
+    - [Game Development (Unity & C#)](#game-development)
     - [Networking & Cloud](#networking-and-cloud)
 - [Improvements](#improvements)
 
