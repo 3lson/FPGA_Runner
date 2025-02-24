@@ -1,14 +1,13 @@
 # FPGA_Runner:Endless Runner Game with FPGA Controller
 
-A Unity-based Endless Runner game controlled using an FPGA-based accelerometer! Players can tilt their FPGA board to move left/right, jump, and slide, creating a unique motion-controlled gaming experience.
-
 - [Project Overview](#Project-Overview)
     - [Key Features](#Key-Features)
 - [Implementation & Approach](#Implementation-and-Approach)
-- 
+    - [FPGA Controller](#FPGA-Controller)
+    - 
 
 ## Project Overview
-This project integrates hardware (FPGA) with software (Unity) to create an interactive and immersive endless runner. Instead of traditional keyboard or touch controls, the player moves by tilting an FPGA-controlled accelerometer, sending real-time data to Unity via TCP communication.
+**FPGA_Runner** is a Unity-based Endless Runner game controlled using an FPGA-based accelerometer! Instead of traditional keyboard or touch controls, players move by tilting an FPGA board, which sends real-time data to Unity via TCP communication. 
 
 ### Key Features:
 ✔️ Tilt to Move – Shift FPGA left/right to change lanes.
