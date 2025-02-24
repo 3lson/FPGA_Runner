@@ -4,7 +4,7 @@ A Unity-based Endless Runner game controlled using an FPGA-based accelerometer! 
 
 - [Project Overview](#Project-Overview)
     - [Key Features](#Key-Features)
-- [Implementation & Approach](#Implementation-&-Approach)
+- [Implementation & Approach](#Implementation-and-Approach)
 - 
 
 ## Project Overview
@@ -17,7 +17,7 @@ This project integrates hardware (FPGA) with software (Unity) to create an inter
 ✔️ Dynamic Speed Increase – The game gets progressively faster!
 ✔️ Real-Time TCP Communication – FPGA sends movement data via a network connection.
 
-## Implementation & Approach
+## Implementation and Approach
 
 ### FPGA Controller (Accelerometer-Based Input)
 - The FPGA board reads accelerometer values (X, Y axes).
