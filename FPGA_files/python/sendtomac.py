@@ -6,7 +6,7 @@ NIOS_CMD_SHELL_BAT = "C:/intelFPGA_lite/18.1/nios2eds/Nios II Command Shell.bat"
 TAPS = 49  
 
 # Set up network connection to Mac
-MAC_IP = "192.168.0.12"  # Replace with your Mac’s IP
+MAC_IP = "192.168.0.0"  # Replace with your Mac’s IP
 PORT = 5005
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
