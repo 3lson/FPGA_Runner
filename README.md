@@ -9,6 +9,9 @@
 - [How to run the game](#how-to-run-the-game)
     -[Steps to run the Game](#steps-to-run-the-game)
 - [Skills Gained from this Project](#skills-gained-from-this-project)
+    - [FGPA & Embedded Systems](#FPGA-and-embedded-systems)
+    - [Game Development (Unity & C#](#game-development)
+    - [Networking & Cloud](#networking-and-cloud)
 - [Improvements](#improvements)
 
 ## Project Overview
@@ -70,19 +73,33 @@ py sendtomac.py
 
 8) Tap to start and Enjoy the Game!
 
-<div align = "center" >
-
 https://github.com/user-attachments/assets/85d03e5f-3dc3-4fda-8345-2ea04e77485c
-|*img: Gantt Chart Progress after Week 1*|
-
-</div>
-
-https://github.com/user-attachments/assets/85d03e5f-3dc3-4fda-8345-2ea04e77485c
+Video 1: Prototype Demo 1 for the game running with FPGA controller
 
 ## Skills Gained from This Project
 
+### FPGA and Embedded Systems
+- **Intel Quartus Prime** – Designed system using Platform Designer (Qsys) with a NIOS II soft processor.
+- **Verilog HDL** – Integrated the accelerometer SPI interface at the top level.
+- **Eclipse IDE (Nios II Software Build Tools)** – Programmed the soft processor in C to retrieve accelerometer data.
+- **Socket Programming (Python & C)** – Implemented TCP communication between FPGA and Unity.
+
+### Game Development
+- **TCP Server** – Developed a real-time TCP listener in C# to receive FPGA data.
+- **Character Controller** – Implemented lane movement, jumping, and sliding.
+- **Physics-Based Gameplay** – Smooth player movement and collision detection.
+- **Game UI & Backend** – Built an interactive Unity interface.
+
+### Networking and Cloud
+- **Low-Latency Networking**: Real-time data streaming from FPGA to Unity
+- **Cloud-Based Data Storage**: AWS DynamoDB for player stats & high scores (Potential expansion)
 
 ## Improvements
-
+- High Score System – Save and display top scores.
+-  Multiplayer Mode – Compete with other FPGA-controlled players.
+- Customizable Skins – Unlock different car/character designs.
+- AWS Integration – Store player data and game analytics in DynamoDB.
+- Enhanced Graphics & Effects – Add particle effects, better animations, and more obstacles.
+- Mobile/Embedded Version – Port to Raspberry Pi or other embedded platforms.
 
 
