@@ -3,7 +3,7 @@
 - [Project Overview](#Project-Overview)
     - [Key Features](#Key-Features)
 - [Implementation & Approach](#Implementation-and-Approach)
-    - [FPGA Controller](#FPGA-Controller)
+    - [FPGA Controller (Accelerometer-Based Input)](#fpga-controller-accelerometer-based-input)
     - 
 
 ## Project Overview
