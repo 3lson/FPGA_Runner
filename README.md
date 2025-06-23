@@ -1,21 +1,6 @@
 # FPGA_Runner:Endless Runner Game with FPGA Controller
 
-- [Project Overview](#Project-Overview)
-    - [Key Features](#Key-Features)
-- [Implementation & Approach](#Implementation-and-Approach)
-    - [FPGA Controller (Accelerometer-Based Input)](#fpga-controller-accelerometer-based-input)
-    - [Unity Game Development](#unity-game-development)
-    - [Networking (TCP)](#networking-tcp-communication)
-- [How to run the game](#how-to-run-the-game)
-    -[Steps to run the Game](#steps-to-run-the-game)
-- [Skills Gained from this Project](#skills-gained-from-this-project)
-    - [FGPA & Embedded Systems](#FPGA-and-embedded-systems)
-    - [Game Development (Unity & C#)](#game-development)
-    - [Networking & Cloud](#networking-and-cloud)
-- [Improvements](#improvements)
-
-## Project Overview
-**FPGA_Runner** is a Unity-based Endless Runner game controlled using an FPGA-based accelerometer! Instead of traditional keyboard or touch controls, players move by tilting an FPGA board, which sends real-time data to Unity via TCP communication. 
+An endless runner game built in Unity, controlled in real-time using an FPGA board with an accelerometer. Move, jump, and slide by tilting the FPGA — no keyboard needed!
 
 ### Key Features:
 ✔️ Tilt to Move – Shift FPGA left/right to change lanes.
@@ -27,28 +12,28 @@
 ## Implementation and Approach
 
 ### FPGA Controller (Accelerometer-Based Input)
-- **Hardware**: FPGA board with an accelerometer (SPI interface).
-- **Processing**: Reads accelerometer values (X, Y axes) and transmits over TCP.
-- **Data Format**: "X_Value, Y_Value" (e.g., "150, -80").
+- FPGA reads X, Y axis data from an SPI-based accelerometer
+- Sends formatted data (e.g. 150, -80) over TCP
+- NIOS II soft-core processor handles data processing and transmission
 
 ### Unity Game Development
-- **TCP Listener** in Unity continuously receives FPGA data.
+- TCP Server in Unity listens for incoming data
 - **Movement logic**:
-  - X-Axis: Moves the player left/right between lanes.
-  - Y-Axis: Triggers jumping or sliding.
-- **Physics-based CharacterController** ensures smooth motion.
-- **Collision detection** manages game-over states when hitting obstacles.
+  - X-Axis: Lane switching
+  - Y-Axis: Jump/slide detection
+- **Physics-based controller** for smooth gameplay
+- Collision logic for obstacles and game-over events
 
 ### Networking (TCP Communication)
-- Unity runs a **TCP Server** on port 5005 to receive FPGA input.
-- The FPGA board sends real-time data, ensuring low-latency motion control.
+- FPGA acts as a TCP client, continuoulsy sending sensor data
+- Unity receives and maps input to game actions with minmal latency
 
 ## How to run the game
 
 ### Prerequisites:
 ✔️ Unity 2021+ installed
-✔️ FPGA Board with Accelerometer
-✔️ Python/TCP Debugging Tool (Optional)
+✔️ FPGA Board with Accelerometer (e.g DE10-Lite)
+✔️ Python/TCP Debugging Tool
 
 ### Steps to run the game:
 1) Open Quartus Prime Lite Edition 18.1. Blast the FPGA with the .sof file
@@ -58,43 +43,47 @@
 & 'C:\intelFPGA_lite\18.1\nios2eds\Nios II Command Shell.bat'
 ```
 
-3) Navigate to where the .elf file in generated
+3) Navigate to the compiled `.elf` and upload it to the board.
 
 4) Navigate back to the python file `sendtomac.py`
 
 5) Open the unity project
 
-6) Hit Run
+6) Press Play in Unity
 
 7) On the Windows Powershell type
 ```bash
 py sendtomac.py
 ```
 
-8) Tap to start and Enjoy the Game!
+8) Tap to start the game and tilt to play!
+
+### Demo Video
 
 https://github.com/user-attachments/assets/85d03e5f-3dc3-4fda-8345-2ea04e77485c
-Video 1: Prototype Demo 1 for the game running with FPGA controller
+
+Prototype running with real-time FPGA input
 
 ## Skills Gained from This Project
 
 ### FPGA and Embedded Systems
-- **Intel Quartus Prime** – Designed system using Platform Designer (Qsys) with a NIOS II soft processor.
-- **Verilog HDL** – Integrated the accelerometer SPI interface at the top level.
-- **Eclipse IDE (Nios II Software Build Tools)** – Programmed the soft processor in C to retrieve accelerometer data.
-- **Socket Programming (Python & C)** – Implemented TCP communication between FPGA and Unity.
+- Designed custom systems in Platform Designer (Qsys)
+- Integrated SPI accelerometer using Verilog
+- Programmed NIOS II soft-core with Eclipse SBT
+- Built TCP clients for real-time data streaming
 
 ### Game Development
-- **TCP Server** – Developed a real-time TCP listener in C# to receive FPGA data.
-- **Character Controller** – Implemented lane movement, jumping, and sliding.
-- **Physics-Based Gameplay** – Smooth player movement and collision detection.
-- **Game UI & Backend** – Built an interactive Unity interface.
+- Developed custom TCP listener in Unity
+- Built smooth lane-switching, jump, and slide mechanics
+- Implemented collision detection and UI elements
+- Focused on player experience, physics, and animations
 
 ### Networking and Cloud
-- **Low-Latency Networking**: Real-time data streaming from FPGA to Unity
-- **Cloud-Based Data Storage**: AWS DynamoDB for player stats & high scores (Potential expansion)
+- Used socket programming for fast communication
+- (Planned) Integration with AWS DynamoDB for storing player data
+- Designed for future multiplyaer and cloud analytics
 
-## Improvements
+## Future Improvements
 - High Score System – Save and display top scores.
 -  Multiplayer Mode – Compete with other FPGA-controlled players.
 - Customizable Skins – Unlock different car/character designs.
