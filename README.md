@@ -1,5 +1,26 @@
 # FPGA_Runner:Endless Runner Game with FPGA Controller
 
+<p align="left">
+  <a href="https://www.intel.com/content/www/us/en/products/programmable/fpga/de10-lite.html">
+    <img src="https://img.shields.io/badge/Platform-DE10--Lite%20FPGA-F26222.svg" alt="Platform">
+  </a>
+  <a href="https://en.wikipedia.org/wiki/Verilog">
+    <img src="https://img.shields.io/badge/HDL-Verilog-1DBA5A.svg" alt="Hardware Description Language">
+  </a>
+  <a href="https://www.altera.com/products/processors/overview.html">
+    <img src="https://img.shields.io/badge/Processor-Nios%20II-007ACC.svg" alt="Soft Processor">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Scripting-Python-3776AB.svg" alt="Python">
+  </a>
+  <a href="https://unity.com/">
+    <img src="https://img.shields.io/badge/Game%20Engine-Unity-000000.svg" alt="Unity">
+  </a>
+  <a href="https://www.intel.com/content/www/us/en/software/programmable/quartus-prime/overview.html">
+    <img src="https://img.shields.io/badge/Tools-Quartus%20Prime%20Lite-76b900.svg" alt="Quartus Prime">
+  </a>
+</p>
+
 An endless runner game built in Unity, controlled in real-time using an FPGA board with an accelerometer. Move, jump, and slide by tilting the FPGA — no keyboard needed!
 
 ### Key Features:
